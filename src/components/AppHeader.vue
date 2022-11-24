@@ -5,8 +5,17 @@ export default {
 </script>
 
 <template>
-  <h1>Header</h1>
+    <div class="container">
+        <div class="logo">
+            <img src="../assets/dc-logo.png" alt="logo">
+        </div>
+        <div class="list">
+            
+        </div>
+    </div>
+  
 </template>
 
-<style>
+<style lang="scss">
+
 </style>
