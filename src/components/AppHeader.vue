@@ -76,9 +76,9 @@ export default {
                 text-decoration: none;
                 color: var(--secondary-color);
                 font-size: 15px;
-            }
-            & .nav ul li a:hover{
-                color: var(--primary-color);
+                &:hover{
+                    color: var(--primary-color);
+                }
             }
         }
 

@@ -5,8 +5,20 @@ export default {
 </script>
 
 <template>
-  <h1>Main</h1>
+  <main>
+    <div class="container">
+        <p>--> Content goes here</p>
+
+    </div>
+  </main>
 </template>
 
-<style>
+<style lang="scss" scoped>
+    main{
+        background-color: var(--secondary-color);
+        height: 130px;
+        color: white;
+        padding: 50px 0;
+        font-size: 23px;
+    }
 </style>
