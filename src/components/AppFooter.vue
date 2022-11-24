@@ -151,6 +151,37 @@ export default {
             right: 200px;
         }
     }
+    .footer-bottom{
+        background-color: var(--third-color);
+        padding: 10px 0;
+
+            & .container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & .sign-up button{
+                    color: white;
+                    border: 2.5px solid var(--primary-color);
+                    padding: 10px 5px;
+                    background-color: var(--third-color);
+                }
+            }
+
+            & .follow-us{
+                display: flex;
+                align-items: center;
+                & h2{
+                    color: var(--primary-color);
+                    font-size: 15px;
+                    margin: 0 10px;
+                }
+                & img{
+                    height: 30px;
+                    margin-left: 1.25rem;
+                }
+            }
+    }
     
     
 </style>
