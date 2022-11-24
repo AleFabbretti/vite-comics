@@ -46,7 +46,7 @@ export default {
         <div class="logo">
             <img src="../assets/dc-logo.png" alt="logo">
         </div>
-        <nav class="header__nav">
+        <nav class="nav">
             <ul>
                 <li v-for="link in menuLinks"><a href="#">{{link.linkName}}</a></li>
             </ul>
@@ -56,18 +56,29 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    .header{
+    header{
         display: flex;
         justify-content: space-between;
-            & img{
-                max-width: 4.375rem;
-                margin: .9375rem 0;
+            & .logo img{
+                max-width: 70px;
+                margin: 15px 0;
             }
-            & ul{
+            & .nav ul{
                 height: 100%;
                 display: flex;
                 align-items: center;
                 list-style: none;
+            }
+            & .nav ul li{
+                margin-left: 25px;
+            }
+            & .nav ul li a{
+                text-decoration: none;
+                color: var(--secondary-color);
+                font-size: 15px;
+            }
+            & .nav ul li a:hover{
+                color: var(--primary-color);
             }
         }
 
