@@ -15,18 +15,17 @@ export default {
       <img src="../assets/jumbotron.jpg" alt="" />
     </section>
     <AppSection />
-    <div class="container">
-      <p>--> Content goes here</p>
-    </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
 main {
   background-color: var(--secondary-color);
-  height: 130px;
-  color: white;
-  padding: 50px 0;
-  font-size: 23px;
+  & .jumbotron img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 </style>
