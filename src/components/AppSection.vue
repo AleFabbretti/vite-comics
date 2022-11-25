@@ -1,9 +1,9 @@
 <script>
 export default {
-  name: "MagazineSection",
+  name: "ComicsSection",
   data() {
     return {
-      magazines: [
+      comics: [
         {
           thumb:
             "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
@@ -94,6 +94,61 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <section class="comics container">
+    <div class="comics">
+      <div class="comic" v-for="comic in comics">
+        <div class="comic-image">
+          <img :src="comic.thumb" :alt="comic.series" />
+        </div>
+        <div class="comic-title">
+          <span>{{ comic.series.toUpperCase() }}</span>
+        </div>
+      </div>
+    </div>
 
-<style lang="scss" scoped></style>
+    <button>LOAD MORE</button>
+  </section>
+</template>
+
+<style lang="scss" scoped>
+.comics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comics.container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.comic {
+  width: calc(100% / 6 - 30px);
+  margin: 0 15px;
+  margin-bottom: 35px;
+
+  & .comic-image img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    margin-bottom: 10px;
+  }
+
+  & .comic-title span {
+    font-size: 14px;
+  }
+}
+
+button {
+  color: white;
+  background-color: var(--primary-color);
+  align-self: center;
+  padding: 8px 40px;
+  border: none;
+  margin-bottom: 20px;
+}
+</style>
